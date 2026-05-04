@@ -43,6 +43,29 @@ int main() {
                 cond = 0;
             } else {
 
+        int coluna;
+        int linha;
+
+            do {
+            printf("JOGADOR 1: escolha a linha e a coluna que irá jogar: ");
+            scanf("%d %d", &linha, &coluna);
+                if (tabu[linha][coluna] == ' ') {
+                    tabu[linha][coluna] = escolhap1;
+                    break;
+                } 
+                printf("Digite novamente (linha e coluna já escolhidas):\n");
+            } while (tabu[linha][coluna] == escolhap2);
+            
+            do {
+            printf("JOGADOR 2: escolha a linha e a coluna que irá jogar: ");
+            scanf("%d %d", &linha, &coluna);
+            if (tabu[linha][coluna] == ' ') {
+                    tabu[linha][coluna] = escolhap2;
+                    break;
+                }
+                printf("Digite novamente (linha e coluna já escolhidas):\n");
+            } while (tabu[linha][coluna] == escolhap1);
+            
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j <  3; j++) {
                 printf("%c ", tabu[i][j]);
@@ -50,25 +73,12 @@ int main() {
             printf("\n");
             printf("-----\n");
         }
-       
-        int coluna;
-        int linha;
-
-        printf("JOGADOR 1: escolha a linha e a coluna que irá jogar: ");
-        scanf("%d %d", &linha, &coluna);
-        tabu[linha][coluna] = escolhap1;
-        
-        printf("JOGADOR 2: escolha a linha e a coluna que irá jogar: ");
-        scanf("%d %d", &linha, &coluna);
-        tabu[linha][coluna] = escolhap2;
-
-        }
+    }
         
 
     } while (cond == 1);
 
     
-
 
     return 0;
 }
