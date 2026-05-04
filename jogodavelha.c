@@ -21,23 +21,25 @@ int main() {
         escolhap2 = 'X';
     }
 
-    //do {
-        int cond = 1;
-        if (tabu[0][0] == tabu[0][1] == tabu[0][2]) {
+    int cond = 1;
+
+    do {
+        
+        if (tabu[0][0] && tabu[0][1] && tabu[0][2] == escolhap1) {
             cond = 0;
-            } else if (tabu[1][0] == tabu[1][1] == tabu[1][2]) {
+            } else if (tabu[1][0] && tabu[1][1] && tabu[1][2] == escolhap1 ) {
                 cond = 0;
-            } else if (tabu[2][0] == tabu[2][1] == tabu[2][2]) {
+            } else if (tabu[2][0] && tabu[2][1] && tabu[2][2] == escolhap1) {
                 cond = 0;
-            } else if (tabu[0][0] == tabu[1][0] == tabu[2][0]) {
+            } else if (tabu[0][0] && tabu[1][0] && tabu[2][0] == escolhap1) {
                 cond = 0;
-            } else if (tabu[0][1] == tabu[1][1] == tabu[2][1]) {
+            } else if (tabu[0][1] && tabu[1][1] && tabu[2][1] == escolhap1) {
                 cond = 0;
-            } else if (tabu[0][2] == tabu[1][2] == tabu[2][2]) { 
+            } else if (tabu[0][2] && tabu[1][2] && tabu[2][2] == escolhap1) { 
                 cond = 0;
-            } else if (tabu[0][0] == tabu[1][1] == tabu[2][2]) {
+            } else if (tabu[0][0] && tabu[1][1] && tabu[2][2] == escolhap1) {
                 cond = 0;
-            } else if (tabu[0][2] == tabu[1][1] == tabu[2][0]) {
+            } else if (tabu[0][2] && tabu[1][1] && tabu[2][0] == escolhap1) {
                 cond = 0;
             } else {
 
@@ -61,9 +63,11 @@ int main() {
         tabu[linha][coluna] = escolhap2;
 
         }
+        
 
-    //} while (cond == 1);
+    } while (cond == 1);
 
+    
 
 
     return 0;
