@@ -25,22 +25,38 @@ int main() {
 
     do {
         
-        if (tabu[0][0] && tabu[0][1] && tabu[0][2] == escolhap1) {
+        if (tabu[0][0] == escolhap1 && tabu[0][1] == escolhap1 && tabu[0][2] == escolhap1) {
             cond = 0;
-            } else if (tabu[1][0] && tabu[1][1] && tabu[1][2] == escolhap1 ) {
+            } else if (tabu[1][0] == escolhap1 && tabu[1][1] == escolhap1 && tabu[1][2] == escolhap1 ) {
                 cond = 0;
-            } else if (tabu[2][0] && tabu[2][1] && tabu[2][2] == escolhap1) {
+            } else if (tabu[2][0] == escolhap1 && tabu[2][1] == escolhap1 && tabu[2][2] == escolhap1) {
                 cond = 0;
-            } else if (tabu[0][0] && tabu[1][0] && tabu[2][0] == escolhap1) {
+            } else if (tabu[0][0] == escolhap1 && tabu[1][0] == escolhap1 && tabu[2][0] == escolhap1) {
                 cond = 0;
-            } else if (tabu[0][1] && tabu[1][1] && tabu[2][1] == escolhap1) {
+            } else if (tabu[0][1] == escolhap1 && tabu[1][1] == escolhap1 && tabu[2][1] == escolhap1) {
                 cond = 0;
-            } else if (tabu[0][2] && tabu[1][2] && tabu[2][2] == escolhap1) { 
+            } else if (tabu[0][2] == escolhap1 && tabu[1][2] == escolhap1 && tabu[2][2] == escolhap1) { 
                 cond = 0;
-            } else if (tabu[0][0] && tabu[1][1] && tabu[2][2] == escolhap1) {
+            } else if (tabu[0][0] == escolhap1 && tabu[1][1] == escolhap1 && tabu[2][2] == escolhap1) {
                 cond = 0;
-            } else if (tabu[0][2] && tabu[1][1] && tabu[2][0] == escolhap1) {
+            } else if (tabu[0][2] == escolhap1 && tabu[1][1] == escolhap1 && tabu[2][0] == escolhap1) {
                 cond = 0;
+            } else if (tabu[0][0] == escolhap2 && tabu[0][1] == escolhap2 && tabu[0][2] == escolhap2) {
+                cond = 2;
+            } else if (tabu[1][0] == escolhap2 && tabu[1][1] == escolhap2 && tabu[1][2] == escolhap2) {
+                cond = 2;
+            } else if (tabu[2][0] == escolhap2 && tabu[2][1] == escolhap2 && tabu[2][2] == escolhap2) {
+                cond = 2;
+            } else if (tabu[0][0] == escolhap2 && tabu[1][0] == escolhap2 && tabu[2][0] == escolhap2) {
+                cond = 2;
+            } else if (tabu[0][1] == escolhap2 && tabu[1][1] == escolhap2 && tabu[2][1] == escolhap2) {
+                cond = 2;
+            } else if (tabu[0][2] == escolhap2 && tabu[1][2] == escolhap2 && tabu[2][2] == escolhap2) { 
+                cond = 2;
+            } else if (tabu[0][0] == escolhap2 && tabu[1][1] == escolhap2 && tabu[2][2] == escolhap2) {
+                cond = 2;
+            } else if (tabu[0][2] == escolhap2 && tabu[1][1] == escolhap2 && tabu[2][0] == escolhap2) {
+                cond = 2;
             } else {
 
         int coluna;
@@ -75,10 +91,15 @@ int main() {
         }
     }
         
-
     } while (cond == 1);
 
-    
+    if (cond == 0) {
+        printf("O jogador 1 venceu!\n");
+    } else if (cond == 2) {
+        printf("O jogador 2 venceu!\n");
+    } else {
+        printf("O jogo empatou.\n");
+    }
 
     return 0;
 }
